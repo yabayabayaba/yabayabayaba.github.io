@@ -22,9 +22,18 @@
 <HR>
 
 <a href="http://somegreatsite.com">Link Name</a>
-
-  <button type="button">Click Me!</button>
-is a link to another nifty site
+<H1>Below is a button trigger complePayment manualy</H1>
+<button id="addToCartButton">CompletePayment</button>
+<script type="text/javascript">
+document.getElementById("addToCartButton").onclick = function(){
+    ttq.track('AddToCart',{  
+    content_id: '301',
+    quantity: 1,
+    price: 8,
+    value: 9.2,
+    currency: 'USD',})
+ }
+</script>
 
 <H1>This is a Header</H1>
 
