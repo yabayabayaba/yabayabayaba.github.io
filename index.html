@@ -22,11 +22,17 @@
 <HR>
 
 <a href="http://somegreatsite.com">Link Name</a>
-<H1>Below is a button trigger complePayment manualy</H1>
-<button id="addToCartButton">CompletePayment</button>
+<H2>Below is a inputbox for email</H1>
+<input id="emailInput" type="text" value="Enter your email here" />
+  
+<H2>Below is a button trigger complePayment manualy</H1>
+<button id="cpButton">CompletePayment</button>
 <script type="text/javascript">
-document.getElementById("addToCartButton").onclick = function(){
-    ttq.track('AddToCart',{  
+document.getElementById("cpButton").onclick = function(){
+    ttq.identify({
+    email: document.getElementById("emailInput").value,
+})
+    ttq.track('CompletePayment',{  
     content_id: '301',
     quantity: 1,
     price: 8,
@@ -35,19 +41,6 @@ document.getElementById("addToCartButton").onclick = function(){
  }
 </script>
 
-<H1>This is a Header</H1>
-
-<H2>This is a Medium Header</H2>
-
-Send me mail at <a href="mailto:support@yourcompany.com">
-
-support@yourcompany.com</a>.
-
-<P> This is a new paragraph!
-
-<P> <B>This is a new paragraph!</B>
-
-<BR> <B><I>This is a new sentence without a paragraph break, in bold italics.</I></B>
 
 <HR>
 
